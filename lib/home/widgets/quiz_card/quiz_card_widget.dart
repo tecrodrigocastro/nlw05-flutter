@@ -1,4 +1,5 @@
 import 'package:DevQuiz/core/core.dart';
+import 'package:DevQuiz/shared/widget/progress_indicator/progress_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
 class QuizCardWidget extends StatelessWidget {
@@ -19,33 +20,29 @@ class QuizCardWidget extends StatelessWidget {
             child: Image.asset(AppImages.blocks),
           ),
           SizedBox(
-            height: 24,
+            height: 20,
           ),
           Text(
             "Gerenciamento de Estado",
             style: AppTextStyles.heading15,
           ),
           SizedBox(
-            height: 24,
+            height: 20,
           ),
           Row(
             children: [
               Expanded(
                 flex: 1,
                 child: Text(
-                  "3 de 10",
+                  "3/10",
                   style: AppTextStyles.body11,
                 ),
               ),
               Expanded(
-                flex: 4,
-                child: LinearProgressIndicator(
-                  value: 0.3,
-                  backgroundColor: AppColors.chartSecondary,
-                  valueColor:
-                      AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),
-                ),
-              )
+                  flex: 4,
+                  child: ProgressIndicatorWidget(
+                    value: 0.3,
+                  ))
             ],
           )
         ],

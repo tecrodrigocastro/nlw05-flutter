@@ -13,11 +13,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarWidget(),
-        body: Column(
-          children: [
-            Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 24,
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   LevelButtonWidget(
@@ -34,20 +37,24 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-            ),
-            Expanded(
-              child: GridView.count(
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                crossAxisCount: 2,
-                children: [
-                  QuizCardWidget(),
-                  QuizCardWidget(),
-                  QuizCardWidget(),
-                ],
+              SizedBox(
+                height: 24,
               ),
-            )
-          ],
+              Expanded(
+                child: GridView.count(
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                  crossAxisCount: 2,
+                  children: [
+                    QuizCardWidget(),
+                    QuizCardWidget(),
+                    QuizCardWidget(),
+                    QuizCardWidget(),
+                  ],
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
