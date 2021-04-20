@@ -1,6 +1,6 @@
 # nlw5
 
-A new Flutter project.
+Quiz.dev is an app where you can learn the flutter language by answering questions.
 
 ## Getting Started
 
